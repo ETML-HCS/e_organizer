@@ -1,0 +1,132 @@
+
+.page-container {
+
+  width: 82%;
+  margin: 0 auto;
+  margin-top: 2em;
+
+ .homepage {
+   color: #007bff;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #777;
+  }
+
+  .content {
+    color: #333;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    background-color: #ffffff;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .features-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .features-list {
+    text-align: left;
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 30px;
+  }
+
+  .content-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content:  space-between;
+
+  }
+
+  .cta-button {
+
+    position: relative;
+    float: right;
+
+    height: 55px;
+    width: 140px;
+
+    background-color: #007bff;
+    color: #fff;
+    
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+   
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+  }
+
+  .cta-button:hover {
+    background-color: #0056b3;
+  }
+
+  .app-header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .app-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+
+  /* Styles pour le titre de la page Soutenances */
+  .page-title-soutenances {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  /* Styles pour le titre de la page Inscription */
+  .page-title-inscription {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  /* Styles pour le titre de la page TPI */
+  .page-title-tpi {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  /* Styles pour le titre de la page Payroll */
+  .page-title-payroll {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  /* Styles pour le titre de la page 404 */
+  .page-title-404 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+}

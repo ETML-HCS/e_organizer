@@ -1,0 +1,104 @@
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+  margin-top: 5em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+nav a {
+  margin-right: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.search input {
+  padding: 10px;
+  border: 1px solid #f9f2f2;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+section {
+  width: 48%;
+}
+
+section h2 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+.active {
+  background-color: rgba(246, 16, 16, 0.846);
+  border-radius: 4px;
+}
+
+nav {
+  position: relative;
+}
+
+nav > ul {
+  position: relative;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 9999;
+}
+
+nav ul ul li {
+  width: auto;
+}
+
+nav > ul > li:hover > ul {
+  display: grid !important;
+}
+
+.menu-list {
+  position: fixed;
+  width: 100%;
+}
+
+.submenu-list {
+  position: relative;
+  top: 2em;
+}

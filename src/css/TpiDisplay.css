@@ -1,0 +1,162 @@
+/* TpiDisplay.css */
+table{
+  border-collapse: collapse;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #4CAF50;
+  --candidate-color: #2196F3;
+  --content-color: #000000;
+}
+
+.tpi-display-page-container .tpis input{
+  width: 100%;
+  padding: 2px;
+  background-color: rgba(229, 235, 232, 0.144);
+  margin: 0 auto;
+  border: none;
+}
+
+input:hover{
+  border: 1px solid #000000 ;
+}
+
+.tpi-display-page-container {
+
+  /* Le planning était trop collé au TOP du menu de navigation */
+  margin-top: 2em;
+
+    .content {
+    background-color: var(--content-color);
+    padding: 0% 0% 2% 2%;
+    max-width: 360px;
+    min-width: 325px;
+    margin-right: 0;
+  }
+
+  .tpiSlotActive{
+    border: 2px solid red;
+  }
+
+  .date {
+    color: white;
+    background-color: var(--content-color);
+    text-align: right;
+    font-weight: bold;
+    font-size: larger;
+    padding-top: 2%;
+    margin-right: 4%;
+  }
+
+  .whiteRoom {
+    grid-column: 1 / span 2;
+    background-color: white;
+    border: 1px solid black;
+  }
+
+  .room {
+    grid-column: 3;
+    text-align: center;
+    color: black;
+    background-color: var(--primary-color);
+    font-weight: bold;
+    border: 1px solid black;
+  }
+
+  .timeSlots {
+    display: grid;
+    grid-template-columns: 15% 5% 80%;
+    margin-right: 2%;
+  }
+
+  .zone2 {
+    grid-column: 2;
+    background-color: white;
+    border: 1px solid black;
+  }
+
+  .schedule {
+    grid-column: 1;
+    color: black;
+    font-weight: bold;
+    font-size: medium;
+    text-align: center;
+    background-color: var(--primary-color);
+    height: 100%;
+    border: 1px solid black;
+  }
+
+  .start {
+    margin-top: 1px;
+    height: 50%;
+  }
+
+  .end {
+    margin-top: 15px;
+    height: 50%;
+  }
+
+  .tpis {
+    grid-column: 3;
+    text-align: center;
+    background-color: blue;
+    border-right: 1px solid black;
+  }
+
+  .candidate {
+    display: flex;
+    background-color: var(--candidate-color);
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    border-bottom: 2px solid black;
+  }
+
+  .expert1 {
+    display: flex;
+    text-align: left;
+    background-color: white;
+    color: black;
+  }
+
+  .expert2 {
+    display: flex;
+    text-align: left;
+    background-color: white;
+    color: black;
+  }
+
+  .projectManager {
+    display: flex;
+    text-align: left;
+    background-color: var(--primary-color);
+    color: black;
+    border-top: 2px solid black;
+  }
+
+  .breakRow {
+    grid-column: 1 / span 3;
+    background-color: var(--primary-color);
+    height: 20px;
+    margin-left: 0;
+    border: 1px solid black;
+  }
+
+  .addButton {
+    position: fixed;
+    bottom: 3%;
+    right: 5%;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background-color: var(--primary-color);
+    font-size: larger;
+    font-weight: bolder;
+  }
+  
+  .addButton:hover {
+    color: white;
+    background-color: var(--content-color);
+  }
+}
