@@ -1,5 +1,4 @@
-/* TpiDisplay.css */
-table{
+table {
   border-collapse: collapse;
   margin: 0;
 }
@@ -10,33 +9,23 @@ table{
   --content-color: #000000;
 }
 
-.tpi-display-page-container .tpis input{
-  width: 100%;
-  padding: 2px;
-  background-color: rgba(229, 235, 232, 0.144);
-  margin: 0 auto;
-  border: none;
-}
-
-input:hover{
-  border: 1px solid #000000 ;
-}
-
 .tpi-display-page-container {
-
-  /* Le planning était trop collé au TOP du menu de navigation */
   margin-top: 2em;
 
-    .content {
+  .content {
     background-color: var(--content-color);
-    padding: 0% 0% 2% 2%;
+    padding: 0% 0% 2px 1px;
     max-width: 360px;
     min-width: 325px;
     margin-right: 0;
   }
 
-  .tpiSlotActive{
+  .tpiSlotactive {
     border: 2px solid red;
+  }
+
+  .tpiCarddragging {
+    border: 2px solid greenyellow;
   }
 
   .date {
@@ -154,9 +143,21 @@ input:hover{
     font-size: larger;
     font-weight: bolder;
   }
-  
+
   .addButton:hover {
     color: white;
     background-color: var(--content-color);
   }
+}
+
+.tpi-display-page-container .tpis input {
+  width: 100%;
+  padding: 2px;
+  background-color: rgba(229, 235, 232, 0.144);
+  margin: 0 auto;
+  border: none;
+}
+
+input:hover {
+  border: 1px solid #000000;
 }
