@@ -51,7 +51,7 @@ function App() {
           />
 
           <Route path='/test2' element={
-            <div>
+            <div className="page-container" >
               <Test></Test>
 
             </div>

@@ -1,68 +1,62 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-const Card = ({ number, handleDragStart, handleDrop, isDragging }) => {
-  const drag = (e) => {
-    e.dataTransfer.setData('text/plain', number);
-    handleDragStart(number);
+const Child = ({ data, setData, index }) => {
+  const handleChangeInput = (event) => {
+    event.preventDefault();
+    const { name, value } = event.target;
+
+    setData((prevData) => {
+      const updatedData = [...prevData];
+      updatedData[index] = { ...updatedData[index], [name]: value };
+      return updatedData;
+    });
   };
 
-  const allowDrop = (e) => {
-    e.preventDefault();
-  };
-
-  const drop = (e) => {
-    e.preventDefault();
-    const droppedNumber = parseInt(e.dataTransfer.getData('text/plain'));
-    handleDrop(droppedNumber, number);
-  };
+  console.log(data);
 
   return (
-    <div
-      className={`card ${isDragging ? 'dragging' : ''}`}
-      draggable={!isDragging}
-      onDragStart={drag}
-      onDragOver={allowDrop}
-      onDrop={drop}
-    >
-      {number}
+    <div>
+      <label htmlFor="nom">Nom:</label>
+      <input
+        placeholder="nom"
+        type="text"
+        value={data.nom}
+        onChange={handleChangeInput}
+        name="nom"
+      />
+      <label htmlFor="prenom">Prénom:</label>
+      <input
+        placeholder="prenom"
+        type="text"
+        value={data.prenom}
+        onChange={handleChangeInput}
+        name="prenom"
+      />
     </div>
   );
 };
+
+const datas = [
+  { nom: "", prenom: "" },
+  { nom: "", prenom: "" },
+  { nom: "", prenom: "" },
+  { nom: "", prenom: "" },
+];
 
 const Test = () => {
-  const [cards, setCards] = useState([1, 2, 3, 4]);
-  const [draggedCard, setDraggedCard] = useState(null);
+  const [data, setData] = useState(datas);
 
-  const handleDragStart = (number) => {
-    setDraggedCard(number);
-  };
-
-  const handleDrop = (source, target) => {
-    const newCards = cards.map((card) => {
-      if (card === source) return target;
-      if (card === target) return source;
-      return card;
-    });
-    setCards(newCards);
-    setDraggedCard(null);
-  };
+  setTimeout(() => {
+    alert(JSON.stringify(data));
+  }, 4000);
 
   return (
-    <div className="app">
-      <h1>Drag and Drop Example</h1>
-      <div className="card-container">
-        {cards.map((number) => (
-          <Card
-            key={number}
-            number={number}
-            handleDragStart={handleDragStart}
-            handleDrop={handleDrop}
-            isDragging={draggedCard === number}
-          />
-        ))}
-      </div>
-    </div>
+    <React.Fragment>
+      <Child data={data[0]} index={0} setData={setData} />
+      <Child data={data[1]} index={1} setData={setData} />
+      <Child data={data[2]} index={2} setData={setData} />
+      <Child data={data[3]} index={3} setData={setData} />
+    </React.Fragment>
   );
 };
-
 export default Test;
